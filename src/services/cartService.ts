@@ -109,8 +109,16 @@ export const cartService = {
     });
   },
 
-  // Remove item from cart
-  removeFromCart: async (productId: number): Promise<Cart> => {
+  // Remove item from cart (using documented DELETE endpoint)
+  removeFromCart: async (productId: number): Promise<void> => {
+    await apiRequest({
+      method: 'DELETE',
+      url: `/cart/items/${productId}`,
+    });
+  },
+
+  // Alternative: Remove item by updating cart (if DELETE endpoint not available)
+  removeFromCartByUpdate: async (productId: number): Promise<Cart> => {
     const currentCart = await cartService.getCart();
     
     const updatedItems = currentCart.items

@@ -97,6 +97,9 @@ const Header = () => {
             {/* User account */}
             {isAuthenticated && user ? (
               <div className="flex items-center space-x-2">
+                <Button variant="ghost" size="sm" asChild>
+                  <Link to="/orders">Mis Órdenes</Link>
+                </Button>
                 <Button variant="ghost" size="icon" className="hover:bg-accent/20" asChild>
                   <Link to="/profile">
                     <User className="h-5 w-5" />
