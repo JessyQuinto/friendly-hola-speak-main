@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TesorosChoco Design System - Premium Chocolate E-commerce
+All colors MUST be HSL format for consistent theming.
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Warm cream backgrounds */
+    --background: 35 20% 98%;
+    --foreground: 25 20% 15%;
+
+    /* Card colors - Soft cream with subtle warmth */
+    --card: 35 15% 96%;
+    --card-foreground: 25 20% 15%;
+
+    /* Popover colors */
+    --popover: 35 15% 96%;
+    --popover-foreground: 25 20% 15%;
+
+    /* Primary - Rich chocolate brown */
+    --primary: 25 35% 25%;
+    --primary-foreground: 35 20% 98%;
+    --primary-glow: 30 45% 40%;
+
+    /* Secondary - Warm golden accent */
+    --secondary: 45 60% 85%;
+    --secondary-foreground: 25 35% 25%;
+
+    /* Muted - Soft neutral tones */
+    --muted: 35 10% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Accent - Premium gold */
+    --accent: 45 80% 65%;
+    --accent-foreground: 25 35% 25%;
+
+    /* Destructive - Warm red for errors */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 35 20% 98%;
+
+    /* Border and form elements - Warm neutrals */
+    --border: 35 15% 85%;
+    --input: 35 15% 92%;
+    --ring: 45 80% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom TesorosChoco Design Variables */
+    --chocolate-dark: 25 40% 20%;
+    --chocolate-medium: 30 35% 35%;
+    --chocolate-light: 35 25% 60%;
+    --gold-accent: 45 85% 55%;
+    --cream-soft: 40 30% 95%;
+    
+    /* Premium gradients */
+    --gradient-chocolate: linear-gradient(135deg, hsl(var(--chocolate-dark)), hsl(var(--chocolate-medium)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-accent)), hsl(45 70% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--chocolate-dark)) 0%, hsl(var(--chocolate-medium)) 50%, hsl(var(--gold-accent)) 100%);
+    
+    /* Elegant shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--chocolate-dark) / 0.1);
+    --shadow-elegant: 0 8px 30px -8px hsl(var(--chocolate-dark) / 0.15);
+    --shadow-premium: 0 12px 40px -10px hsl(var(--chocolate-dark) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--gold-accent) / 0.3);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar colors - matching theme */
+    --sidebar-background: 35 15% 96%;
+    --sidebar-foreground: 25 20% 15%;
+    --sidebar-primary: 25 35% 25%;
+    --sidebar-primary-foreground: 35 20% 98%;
+    --sidebar-accent: 45 60% 85%;
+    --sidebar-accent-foreground: 25 35% 25%;
+    --sidebar-border: 35 15% 85%;
+    --sidebar-ring: 45 80% 65%;
+  }
+
+  .dark {
+    /* Dark mode - Rich chocolate theme */
+    --background: 25 35% 8%;
+    --foreground: 35 20% 95%;
+
+    --card: 25 30% 12%;
+    --card-foreground: 35 20% 95%;
+
+    --popover: 25 30% 12%;
+    --popover-foreground: 35 20% 95%;
+
+    --primary: 45 80% 65%;
+    --primary-foreground: 25 35% 8%;
+    --primary-glow: 45 70% 70%;
+
+    --secondary: 30 25% 20%;
+    --secondary-foreground: 35 20% 95%;
+
+    --muted: 25 25% 15%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 45 80% 65%;
+    --accent-foreground: 25 35% 8%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 35 20% 95%;
+
+    --border: 25 25% 20%;
+    --input: 25 25% 18%;
+    --ring: 45 80% 65%;
+    
+    /* Dark mode sidebar */
+    --sidebar-background: 25 35% 8%;
+    --sidebar-foreground: 35 20% 95%;
+    --sidebar-primary: 45 80% 65%;
+    --sidebar-primary-foreground: 25 35% 8%;
+    --sidebar-accent: 30 25% 20%;
+    --sidebar-accent-foreground: 35 20% 95%;
+    --sidebar-border: 25 25% 20%;
+    --sidebar-ring: 45 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
